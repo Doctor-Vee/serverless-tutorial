@@ -7,7 +7,7 @@ export const main = handler(async (event, context) => {
     const params = {
         TableName: process.env.DATABASE_TABLE_NAME,
         Item: {
-            userId: "333",
+            userId: event.pathParameters.userId,
             noteId: uuid.v1(),
             content: data.content,
             attachment: data.attachment,

@@ -1,3 +1,6 @@
 {
-  "body": "{\"content\":\"hello worldly people Repent o\", \"attachment\":\"hello.jpg\"}"
+  "body": "{\"content\":\"hello worldly people Repent o\", \"attachment\":\"repent.jpg\"}",
+  "pathParameters": {
+    "userId": "125"
+  }
 }

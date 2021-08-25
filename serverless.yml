@@ -45,7 +45,7 @@ functions:
           path: notes
           method: post
   get:
-    handler: get.mainf
+    handler: get.main
     events:
       - http:
           path: notes/{id}

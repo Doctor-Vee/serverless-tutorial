@@ -6,8 +6,8 @@ export const main = handler(async (event, context) => {
     const params = {
         TableName: process.env.DATABASE_TABLE_NAME,
         Key: {
-            userId: "333", // The id of the author
-            noteId: event.pathParameters.id, // The id of the note from the path
+            userId: event.pathParameters.userId, // The id of the author
+            noteId: event.pathParameters.noteId, // The id of the note from the path
         },
         UpdateExpression: "SET content = :content, attachment = :attachment",
         ExpressionAttributeValues: {
