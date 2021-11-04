@@ -7,15 +7,16 @@ export const main = handler(async (event, context) => {
     const params = {
         TableName: process.env.DATABASE_TABLE_NAME,
         Item: {
-            userId: "444",
+            userId: event.requestContext.identity.cognitoIdentityId, // The id of the author
             noteId: uuid.v1(),
             content: data.content,
             attachment: data.attachment,
             createdAt: Date.now(),
         },
     };
+
     await dynamoDb.put(params);
 
     return params.Item;
-});
 
+});

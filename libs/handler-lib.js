@@ -6,6 +6,8 @@ export default function handler(lambda) {
             body = await lambda(event, context);
             statusCode = 200;
         } catch (e) {
+            // Remove this line when cleaning up. It's just to help us know the full error message if any error shows up while we're still developing.
+            console.error(e);
             body = { error: e.message };
             statusCode = 500;
         }
@@ -14,6 +16,10 @@ export default function handler(lambda) {
         return{
             statusCode,
             body: JSON.stringify(body),
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Credentials": true,
+            },
         };
     };
 }

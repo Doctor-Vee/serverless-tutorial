@@ -1,9 +1,10 @@
-region: us-east-1
-API Gateway ID: 1mloh1540g
 
-endpoints:
-  POST - https://1mloh1540g.execute-api.us-east-1.amazonaws.com/prod/notes
-  GET - https://1mloh1540g.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
-  GET - https://1mloh1540g.execute-api.us-east-1.amazonaws.com/prod/notes
-  POST - https://1mloh1540g.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
-  DELETE - https://1mloh1540g.execute-api.us-east-1.amazonaws.com/prod/notes/{id}
+notes-user-pool
+Cognito user Pool Id: us-east-1_AUcHpojNT
+
+App Client ID for notes-app in AWS Cognito - 5vl25cmg9vs1a7l4fblv4hdja7
+
+API_GATEWAY_ID: 7ta0vdn1ll
+API_GATEWAY_REGION: us-east-1
+
+Identity pool ID: us-east-1:2f7f49c1-8586-49aa-8a28-26cfdeffa5c9
